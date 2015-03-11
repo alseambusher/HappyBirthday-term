@@ -1,0 +1,37 @@
+#!/bin/sh
+
+AUDIO_FILE=""
+LYRICS_FILE=""
+LINUX_OUT=""
+WIN_OUT=""
+
+usage()
+{
+cat <<EOF
+Usage $0:
+./equalizer [-f audio] [-l lyrics] [-o linux-outfile] [-O windows-outfile]
+</code>
+EOF
+}
+
+while getopts "hf:l:o:O" OPTION
+do
+	case $OPTION in
+	h)
+		usage
+		exit 0
+		;;
+	f)
+		AUDIO_FILE=$OPTARG
+		;;
+	l)
+		LYRICS_FILE=$OPTARG
+		;;
+	o)
+		LINUX_OUT=$OPTARG
+		;;
+	O)
+		WIN_OUT=$OPTARG
+		;;
+	esac
+done
