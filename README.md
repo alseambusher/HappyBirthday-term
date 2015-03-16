@@ -1,8 +1,6 @@
-Equalizer-term
+Happy Birthday
 ==============
 
-Music player on terminal with equalizer
+A terminal based Happy Birthday card
 
-<code>
-./equalizer \[-f audio\] \[-l lyrics\] \[-o linux-outfile\] \[-O windows-outfile\]
-</code>
+See <a href="">this</a> for demo and details.
