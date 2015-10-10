@@ -1,7 +1,5 @@
 import scipy.io.wavfile as wavfile
 import numpy as np
-import pylab as pl
-from pylab import plot, show, title, xlabel, ylabel, subplot, savefig
 import time
 import os
 import sys
@@ -35,8 +33,10 @@ current_flame = ""
 
 os.system("tput civis") #hide cursor
 
-# TODO open file with some player. If you are on mac, uncomment following line 
-os.system("open "+FILE)
+if sys.platform is "darwin":
+	os.system("open "+FILE)
+else:
+	os.system("mplayer -msglevel all=-1 "+FILE+"&")
 
 for _f in range(data_length/display_rate):
 
