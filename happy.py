@@ -43,7 +43,7 @@ for _f in range(data_length/display_rate):
 	# fluttering effect to candle flames
 	if _f%flame_flutter_rate == 0:
 		current_flame = (" "*(cols/2 - cake_size/2))+((" "+FLAMES[randint(0,2)]+" ")*(cake_size/5))
-	print current_flame
+	print (current_flame)
 	
 	# candles
 	print (" "*(cols/2 - cake_size/2))+("  |  "*(cake_size/5))
